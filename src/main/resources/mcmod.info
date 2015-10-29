@@ -1,0 +1,15 @@
+[
+{
+  "modid": "yaam",
+  "name": "YAAM - Yet Another Armor Mod",
+  "description": "Additional armor and tools using minecraft materials",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["notabadminer"],
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
