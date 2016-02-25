@@ -1,8 +1,9 @@
-package armorplus;
+package yaam.items;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
+import yaam.YAAM;
 
 public class ItemObsidianArmor extends ItemArmor {
 	private String textureName;
@@ -11,7 +12,6 @@ public class ItemObsidianArmor extends ItemArmor {
 		super(material, 0, type);
 		this.textureName = textureName;
 		this.setUnlocalizedName(unlocalizedName);
-		this.setTextureName(YAAM.MODID + ":" + unlocalizedName);
 	}
 
 	@Override
