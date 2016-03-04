@@ -1,5 +1,6 @@
 package yaam.proxy;
 
+import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
@@ -43,13 +44,15 @@ import yaam.items.ItemWoodPaxel;
 
 public class CommonProxy {
 
-	public Item obsidian_sword, obsidian_pickaxe, obsidian_axe, obsidian_shovel, obsidian_hoe, obsidian_helmet,
-			obsidian_chestplate, obsidian_leggings, obsidian_boots, quartz_sword, quartz_pickaxe, quartz_axe,
-			quartz_shovel, quartz_hoe, quartz_helmet, quartz_chestplate, quartz_leggings, quartz_boots, emerald_sword,
-			emerald_pickaxe, emerald_axe, emerald_shovel, emerald_hoe, emerald_helmet, emerald_chestplate,
-			emerald_leggings, emerald_boots, lapis_sword, lapis_pickaxe, lapis_axe, lapis_shovel, lapis_hoe,
-			lapis_helmet, lapis_chestplate, lapis_leggings, lapis_boots, wood_paxel, stone_paxel, iron_paxel,
-			gold_paxel, diamond_paxel, emerald_paxel, quartz_paxel, obsidian_paxel, lapis_paxel;
+	public static Item obsidian_sword, obsidian_pickaxe, obsidian_axe, obsidian_shovel, obsidian_hoe, obsidian_helmet,
+			obsidian_chestplate, obsidian_leggings, obsidian_boots, obsidian_paxel, quartz_sword, quartz_pickaxe,
+			quartz_axe, quartz_shovel, quartz_hoe, quartz_helmet, quartz_chestplate, quartz_leggings, quartz_boots,
+			quartz_paxel, emerald_sword, emerald_pickaxe, emerald_axe, emerald_shovel, emerald_hoe, emerald_helmet,
+			emerald_chestplate, emerald_leggings, emerald_boots, emerald_paxel, lapis_sword, lapis_pickaxe, lapis_axe,
+			lapis_shovel, lapis_hoe, lapis_helmet, lapis_chestplate, lapis_leggings, lapis_boots, lapis_paxel,
+			wood_paxel, stone_paxel, iron_paxel, gold_paxel, diamond_paxel;
+
+	public static Block blockDynamicGlow;
 
 	// Tool materials
 	static Item.ToolMaterial toolMaterialObsidian = EnumHelper.addToolMaterial("Obsidian", 3, 1200, 9.0F, 3.0F, 16);
@@ -75,6 +78,8 @@ public class CommonProxy {
 			new int[] { 3, 8, 6, 3 }, 26);
 	static ArmorMaterial armorMaterialLapis = EnumHelper.addArmorMaterial("Lapis", "universalcoins:lapis", 9,
 			new int[] { 2, 6, 5, 2 }, 30);
+	static ArmorMaterial armorMaterialGlowstone = EnumHelper.addArmorMaterial("Glowstone", "universalcoins:glowstone",
+			9, new int[] { 2, 6, 5, 2 }, 30); // TODO fix values to gold
 
 	public void registerBlocks() {
 	}
@@ -303,78 +308,6 @@ public class CommonProxy {
 						new Object[] { "PAL", " S ", " S ", Character.valueOf('A'), Items.diamond_axe,
 								Character.valueOf('P'), Items.diamond_pickaxe, Character.valueOf('L'),
 								Items.diamond_shovel, Character.valueOf('S'), Items.stick });
-			}
-			if (YAAM.smeltingEnabled) {
-				// iron
-				GameRegistry.addSmelting(Items.iron_hoe, new ItemStack(Items.iron_ingot, 2), 0F);
-				GameRegistry.addSmelting(Items.iron_shovel, new ItemStack(Items.iron_ingot, 1), 0F);
-				GameRegistry.addSmelting(Items.iron_axe, new ItemStack(Items.iron_ingot, 3), 0F);
-				GameRegistry.addSmelting(Items.iron_pickaxe, new ItemStack(Items.iron_ingot, 3), 0F);
-				GameRegistry.addSmelting(Items.iron_boots, new ItemStack(Items.iron_ingot, 4), 0F);
-				GameRegistry.addSmelting(Items.iron_leggings, new ItemStack(Items.iron_ingot, 7), 0F);
-				GameRegistry.addSmelting(Items.iron_chestplate, new ItemStack(Items.iron_ingot, 8), 0F);
-				GameRegistry.addSmelting(Items.iron_helmet, new ItemStack(Items.iron_ingot, 5), 0F);
-				GameRegistry.addSmelting(iron_paxel, new ItemStack(Items.iron_ingot, 7), 0F);
-				// gold
-				GameRegistry.addSmelting(Items.golden_hoe, new ItemStack(Items.gold_ingot, 2), 0F);
-				GameRegistry.addSmelting(Items.golden_shovel, new ItemStack(Items.gold_ingot, 1), 0F);
-				GameRegistry.addSmelting(Items.golden_axe, new ItemStack(Items.gold_ingot, 3), 0F);
-				GameRegistry.addSmelting(Items.golden_pickaxe, new ItemStack(Items.gold_ingot, 3), 0F);
-				GameRegistry.addSmelting(Items.golden_boots, new ItemStack(Items.gold_ingot, 4), 0F);
-				GameRegistry.addSmelting(Items.golden_leggings, new ItemStack(Items.gold_ingot, 7), 0F);
-				GameRegistry.addSmelting(Items.golden_chestplate, new ItemStack(Items.gold_ingot, 8), 0F);
-				GameRegistry.addSmelting(Items.golden_helmet, new ItemStack(Items.gold_ingot, 5), 0F);
-				GameRegistry.addSmelting(gold_paxel, new ItemStack(Items.gold_ingot, 7), 0F);
-				// diamond
-				GameRegistry.addSmelting(Items.diamond_hoe, new ItemStack(Items.diamond, 2), 0F);
-				GameRegistry.addSmelting(Items.diamond_shovel, new ItemStack(Items.diamond, 1), 0F);
-				GameRegistry.addSmelting(Items.diamond_axe, new ItemStack(Items.diamond, 3), 0F);
-				GameRegistry.addSmelting(Items.diamond_pickaxe, new ItemStack(Items.diamond, 3), 0F);
-				GameRegistry.addSmelting(Items.diamond_boots, new ItemStack(Items.diamond, 4), 0F);
-				GameRegistry.addSmelting(Items.diamond_leggings, new ItemStack(Items.diamond, 7), 0F);
-				GameRegistry.addSmelting(Items.diamond_chestplate, new ItemStack(Items.diamond, 8), 0F);
-				GameRegistry.addSmelting(Items.diamond_helmet, new ItemStack(Items.diamond, 5), 0F);
-				GameRegistry.addSmelting(diamond_paxel, new ItemStack(Items.diamond, 7), 0F);
-				// obsidian
-				GameRegistry.addSmelting(obsidian_hoe, new ItemStack(Blocks.obsidian, 2), 0F);
-				GameRegistry.addSmelting(obsidian_shovel, new ItemStack(Blocks.obsidian, 1), 0F);
-				GameRegistry.addSmelting(obsidian_axe, new ItemStack(Blocks.obsidian, 3), 0F);
-				GameRegistry.addSmelting(obsidian_pickaxe, new ItemStack(Blocks.obsidian, 3), 0F);
-				GameRegistry.addSmelting(obsidian_boots, new ItemStack(Blocks.obsidian, 4), 0F);
-				GameRegistry.addSmelting(obsidian_leggings, new ItemStack(Blocks.obsidian, 7), 0F);
-				GameRegistry.addSmelting(obsidian_chestplate, new ItemStack(Blocks.obsidian, 8), 0F);
-				GameRegistry.addSmelting(obsidian_helmet, new ItemStack(Blocks.obsidian, 5), 0F);
-				GameRegistry.addSmelting(obsidian_paxel, new ItemStack(Blocks.obsidian, 7), 0F);
-				// emerald
-				GameRegistry.addSmelting(emerald_hoe, new ItemStack(Items.emerald, 2), 0F);
-				GameRegistry.addSmelting(emerald_shovel, new ItemStack(Items.emerald, 1), 0F);
-				GameRegistry.addSmelting(emerald_axe, new ItemStack(Items.emerald, 3), 0F);
-				GameRegistry.addSmelting(emerald_pickaxe, new ItemStack(Items.emerald, 3), 0F);
-				GameRegistry.addSmelting(emerald_boots, new ItemStack(Items.emerald, 4), 0F);
-				GameRegistry.addSmelting(emerald_leggings, new ItemStack(Items.emerald, 7), 0F);
-				GameRegistry.addSmelting(emerald_chestplate, new ItemStack(Items.emerald, 8), 0F);
-				GameRegistry.addSmelting(emerald_helmet, new ItemStack(Items.emerald, 5), 0F);
-				GameRegistry.addSmelting(emerald_paxel, new ItemStack(Items.emerald, 7), 0F);
-				// quartz
-				GameRegistry.addSmelting(quartz_hoe, new ItemStack(Items.quartz, 2), 0F);
-				GameRegistry.addSmelting(quartz_shovel, new ItemStack(Items.quartz, 1), 0F);
-				GameRegistry.addSmelting(quartz_axe, new ItemStack(Items.quartz, 3), 0F);
-				GameRegistry.addSmelting(quartz_pickaxe, new ItemStack(Items.quartz, 3), 0F);
-				GameRegistry.addSmelting(quartz_boots, new ItemStack(Items.quartz, 4), 0F);
-				GameRegistry.addSmelting(quartz_leggings, new ItemStack(Items.quartz, 7), 0F);
-				GameRegistry.addSmelting(quartz_chestplate, new ItemStack(Items.quartz, 8), 0F);
-				GameRegistry.addSmelting(quartz_helmet, new ItemStack(Items.quartz, 5), 0F);
-				GameRegistry.addSmelting(quartz_paxel, new ItemStack(Items.quartz, 7), 0F);
-				// lapis
-				GameRegistry.addSmelting(lapis_hoe, new ItemStack(Items.dye, 2, 4), 0F);
-				GameRegistry.addSmelting(lapis_shovel, new ItemStack(Items.dye, 1, 4), 0F);
-				GameRegistry.addSmelting(lapis_axe, new ItemStack(Items.dye, 3, 4), 0F);
-				GameRegistry.addSmelting(lapis_pickaxe, new ItemStack(Items.dye, 3, 4), 0F);
-				GameRegistry.addSmelting(lapis_boots, new ItemStack(Items.dye, 4, 4), 0F);
-				GameRegistry.addSmelting(lapis_leggings, new ItemStack(Items.dye, 7, 4), 0F);
-				GameRegistry.addSmelting(lapis_chestplate, new ItemStack(Items.dye, 8, 4), 0F);
-				GameRegistry.addSmelting(lapis_helmet, new ItemStack(Items.dye, 5, 4), 0F);
-				GameRegistry.addSmelting(lapis_paxel, new ItemStack(Items.dye, 7, 4), 0F);
 			}
 		}
 	}

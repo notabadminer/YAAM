@@ -3,7 +3,6 @@ package yaam.proxy;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.ItemModelMesher;
 import net.minecraft.client.resources.model.ModelResourceLocation;
-import net.minecraft.item.Item;
 import yaam.YAAM;
 
 public class ClientProxy extends CommonProxy {
@@ -11,7 +10,7 @@ public class ClientProxy extends CommonProxy {
 	@Override
 	public void registerRenderers() {
 		ItemModelMesher mesher = Minecraft.getMinecraft().getRenderItem().getItemModelMesher();
-		//obsidian
+		// obsidian
 		mesher.register(obsidian_sword, 0, new ModelResourceLocation(
 				YAAM.MODID + ":" + obsidian_sword.getUnlocalizedName().substring(5), "inventory"));
 		mesher.register(obsidian_pickaxe, 0, new ModelResourceLocation(
@@ -32,7 +31,7 @@ public class ClientProxy extends CommonProxy {
 				YAAM.MODID + ":" + obsidian_leggings.getUnlocalizedName().substring(5), "inventory"));
 		mesher.register(obsidian_boots, 0, new ModelResourceLocation(
 				YAAM.MODID + ":" + obsidian_boots.getUnlocalizedName().substring(5), "inventory"));
-		//quartz
+		// quartz
 		mesher.register(quartz_sword, 0, new ModelResourceLocation(
 				YAAM.MODID + ":" + quartz_sword.getUnlocalizedName().substring(5), "inventory"));
 		mesher.register(quartz_pickaxe, 0, new ModelResourceLocation(
@@ -53,7 +52,7 @@ public class ClientProxy extends CommonProxy {
 				YAAM.MODID + ":" + quartz_leggings.getUnlocalizedName().substring(5), "inventory"));
 		mesher.register(quartz_boots, 0, new ModelResourceLocation(
 				YAAM.MODID + ":" + quartz_boots.getUnlocalizedName().substring(5), "inventory"));
-		//emerald
+		// emerald
 		mesher.register(emerald_sword, 0, new ModelResourceLocation(
 				YAAM.MODID + ":" + emerald_sword.getUnlocalizedName().substring(5), "inventory"));
 		mesher.register(emerald_pickaxe, 0, new ModelResourceLocation(
@@ -74,17 +73,17 @@ public class ClientProxy extends CommonProxy {
 				YAAM.MODID + ":" + emerald_leggings.getUnlocalizedName().substring(5), "inventory"));
 		mesher.register(emerald_boots, 0, new ModelResourceLocation(
 				YAAM.MODID + ":" + emerald_boots.getUnlocalizedName().substring(5), "inventory"));
-		//lapis
+		// lapis
 		mesher.register(lapis_sword, 0, new ModelResourceLocation(
 				YAAM.MODID + ":" + lapis_sword.getUnlocalizedName().substring(5), "inventory"));
 		mesher.register(lapis_pickaxe, 0, new ModelResourceLocation(
 				YAAM.MODID + ":" + lapis_pickaxe.getUnlocalizedName().substring(5), "inventory"));
-		mesher.register(lapis_axe, 0, new ModelResourceLocation(
-				YAAM.MODID + ":" + lapis_axe.getUnlocalizedName().substring(5), "inventory"));
+		mesher.register(lapis_axe, 0,
+				new ModelResourceLocation(YAAM.MODID + ":" + lapis_axe.getUnlocalizedName().substring(5), "inventory"));
 		mesher.register(lapis_shovel, 0, new ModelResourceLocation(
 				YAAM.MODID + ":" + lapis_shovel.getUnlocalizedName().substring(5), "inventory"));
-		mesher.register(lapis_hoe, 0, new ModelResourceLocation(
-				YAAM.MODID + ":" + lapis_hoe.getUnlocalizedName().substring(5), "inventory"));
+		mesher.register(lapis_hoe, 0,
+				new ModelResourceLocation(YAAM.MODID + ":" + lapis_hoe.getUnlocalizedName().substring(5), "inventory"));
 		mesher.register(lapis_paxel, 0, new ModelResourceLocation(
 				YAAM.MODID + ":" + lapis_paxel.getUnlocalizedName().substring(5), "inventory"));
 		mesher.register(lapis_helmet, 0, new ModelResourceLocation(
@@ -95,7 +94,7 @@ public class ClientProxy extends CommonProxy {
 				YAAM.MODID + ":" + lapis_leggings.getUnlocalizedName().substring(5), "inventory"));
 		mesher.register(lapis_boots, 0, new ModelResourceLocation(
 				YAAM.MODID + ":" + lapis_boots.getUnlocalizedName().substring(5), "inventory"));
-		//native material paxels
+		// native material paxels
 		mesher.register(wood_paxel, 0, new ModelResourceLocation(
 				YAAM.MODID + ":" + wood_paxel.getUnlocalizedName().substring(5), "inventory"));
 		mesher.register(stone_paxel, 0, new ModelResourceLocation(

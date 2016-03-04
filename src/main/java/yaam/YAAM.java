@@ -1,6 +1,5 @@
 package yaam;
 
-import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.common.config.Property;
 import net.minecraftforge.fml.common.Mod;
@@ -8,25 +7,18 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLInterModComms;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
-import net.minecraftforge.fml.common.network.NetworkRegistry;
-import net.minecraftforge.fml.common.network.simpleimpl.SimpleNetworkWrapper;
-import net.minecraftforge.fml.relauncher.Side;
-import yaam.net.RecipeMessage;
 import yaam.proxy.CommonProxy;
-import yaam.util.PlayerLoginHandler;
 
 @Mod(modid = YAAM.MODID, name = YAAM.NAME, version = YAAM.VERSION, acceptedMinecraftVersions = "@MC_VERSION@")
 public class YAAM {
 	public static final String MODID = "yaam";
 	public static final String NAME = "YAAM";
 	public static final String VERSION = "@VERSION@";
-	public static boolean obsidianEnabled, quartzEnabled, emeraldEnabled, lapisEnabled, nativePaxelsEnabled,
-			smeltingEnabled;
+	public static boolean obsidianEnabled, quartzEnabled, emeraldEnabled, lapisEnabled, glowstoneEnabled,
+			nativePaxelsEnabled;
 
 	@SidedProxy(clientSide = "yaam.proxy.ClientProxy", serverSide = "yaam.proxy.CommonProxy")
 	public static CommonProxy proxy;
-
-	public static SimpleNetworkWrapper snw;
 
 	@Mod.EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
@@ -46,29 +38,23 @@ public class YAAM {
 		Property lapisRecipes = config.get("Recipes", "Lapis Item Recipes", true);
 		quartzRecipes.comment = "Set to false to disable crafting recipes for lapis tools, weapons, and armor.";
 		lapisEnabled = lapisRecipes.getBoolean(true);
+		Property glowstoneRecipes = config.get("Recipes", "Glowstone Item Recipes", true);
+		glowstoneRecipes.comment = "Set to false to disable crafting recipes for glowstone tools, weapons, and armor.";
+		glowstoneEnabled = glowstoneRecipes.getBoolean(true);
 
 		// native paxels
 		Property nativePaxels = config.get("Recipes", "Native Paxel Recipes", true);
 		nativePaxels.comment = "Set to false to disable crafting recipes for wood, stone, iron, gold, and diamond paxels";
 		nativePaxelsEnabled = nativePaxels.getBoolean(true);
 
-		// smelting recipes
-		Property smeltingRecipes = config.get("Recipes", "Smelting Recipes", true);
-		smeltingRecipes.comment = "Set to false to disable smelting recipes. Enabled allows tools to be smelted down returning core materials.";
-		smeltingEnabled = smeltingRecipes.getBoolean(true);
-
 		config.save();
 
-		// network packet handling
-		snw = NetworkRegistry.INSTANCE.newSimpleChannel(MODID);
-		snw.registerMessage(RecipeMessage.class, RecipeMessage.class, 0, Side.CLIENT);
-
-		MinecraftForge.EVENT_BUS.register(new PlayerLoginHandler());
 	}
 
 	@Mod.EventHandler
-	public void preInit(FMLInitializationEvent event) {
+	public void init(FMLInitializationEvent event) {
 		proxy.registerItems();
+		proxy.registerBlocks();
 		proxy.registerRecipes();
 		proxy.registerRenderers();
 
