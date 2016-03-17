@@ -8,6 +8,7 @@ import com.google.common.collect.Sets;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
 import net.minecraft.item.ItemPickaxe;
 import net.minecraft.item.ItemStack;
 
@@ -39,5 +40,12 @@ public class ItemQuartzPaxel extends ItemPickaxe {
 				|| block.getMaterial() == Material.plants)
 			return this.efficiencyOnProperMaterial;
 		return this.EFFECTIVE_ON.contains(block) ? this.efficiencyOnProperMaterial : 1.0F;
+	}
+
+	@Override
+	public boolean getIsRepairable(ItemStack toRepair, ItemStack repair) {
+		if (net.minecraftforge.oredict.OreDictionary.itemMatches(new ItemStack(Items.quartz), repair, false))
+			return true;
+		return super.getIsRepairable(toRepair, repair);
 	}
 }

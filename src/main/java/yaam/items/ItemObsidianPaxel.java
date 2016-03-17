@@ -40,4 +40,11 @@ public class ItemObsidianPaxel extends ItemPickaxe {
 			return this.efficiencyOnProperMaterial;
 		return this.EFFECTIVE_ON.contains(block) ? this.efficiencyOnProperMaterial : 1.0F;
 	}
+
+	@Override
+	public boolean getIsRepairable(ItemStack toRepair, ItemStack repair) {
+		if (net.minecraftforge.oredict.OreDictionary.itemMatches(new ItemStack(Blocks.obsidian), repair, false))
+			return true;
+		return super.getIsRepairable(toRepair, repair);
+	}
 }
