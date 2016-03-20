@@ -14,8 +14,7 @@ public class YAAM {
 	public static final String MODID = "yaam";
 	public static final String NAME = "YAAM";
 	public static final String VERSION = "@VERSION@";
-	public static boolean obsidianEnabled, quartzEnabled, emeraldEnabled, lapisEnabled, glowstoneEnabled,
-			nativePaxelsEnabled;
+	public static boolean obsidianEnabled, quartzEnabled, emeraldEnabled, lapisEnabled, nativePaxelsEnabled;
 
 	@SidedProxy(clientSide = "yaam.proxy.ClientProxy", serverSide = "yaam.proxy.CommonProxy")
 	public static CommonProxy proxy;
@@ -38,9 +37,6 @@ public class YAAM {
 		Property lapisRecipes = config.get("Recipes", "Lapis Item Recipes", true);
 		quartzRecipes.comment = "Set to false to disable crafting recipes for lapis tools, weapons, and armor.";
 		lapisEnabled = lapisRecipes.getBoolean(true);
-		Property glowstoneRecipes = config.get("Recipes", "Glowstone Item Recipes", true);
-		glowstoneRecipes.comment = "Set to false to disable crafting recipes for glowstone tools, weapons, and armor.";
-		glowstoneEnabled = glowstoneRecipes.getBoolean(true);
 
 		// native paxels
 		Property nativePaxels = config.get("Recipes", "Native Paxel Recipes", true);
