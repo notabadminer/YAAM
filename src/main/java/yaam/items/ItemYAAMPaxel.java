@@ -22,16 +22,16 @@ import net.minecraft.world.World;
 
 public class ItemYAAMPaxel extends ItemTool {
 
-	private static final Set<Block> EFFECTIVE_ON = Sets.newHashSet(new Block[] { Blocks.clay, Blocks.dirt,
-			Blocks.farmland, Blocks.grass, Blocks.gravel, Blocks.mycelium, Blocks.sand, Blocks.snow, Blocks.snow_layer,
-			Blocks.soul_sand, Blocks.grass_path, Blocks.activator_rail, Blocks.coal_ore, Blocks.cobblestone,
-			Blocks.detector_rail, Blocks.diamond_block, Blocks.diamond_ore, Blocks.double_stone_slab,
-			Blocks.golden_rail, Blocks.gold_block, Blocks.gold_ore, Blocks.ice, Blocks.iron_block, Blocks.iron_ore,
-			Blocks.lapis_block, Blocks.lapis_ore, Blocks.lit_redstone_ore, Blocks.mossy_cobblestone, Blocks.netherrack,
-			Blocks.packed_ice, Blocks.rail, Blocks.redstone_ore, Blocks.sandstone, Blocks.red_sandstone, Blocks.stone,
-			Blocks.stone_slab, Blocks.stone_button, Blocks.stone_pressure_plate, Blocks.planks, Blocks.bookshelf,
-			Blocks.log, Blocks.log2, Blocks.chest, Blocks.pumpkin, Blocks.lit_pumpkin, Blocks.melon_block,
-			Blocks.ladder, Blocks.wooden_button, Blocks.wooden_pressure_plate });
+	private static final Set<Block> EFFECTIVE_ON = Sets.newHashSet(new Block[] { Blocks.CLAY, Blocks.DIRT,
+			Blocks.FARMLAND, Blocks.GRASS, Blocks.GRAVEL, Blocks.MYCELIUM, Blocks.SAND, Blocks.SNOW, Blocks.SNOW_LAYER,
+			Blocks.SOUL_SAND, Blocks.GRASS_PATH, Blocks.ACTIVATOR_RAIL, Blocks.COAL_ORE, Blocks.COBBLESTONE,
+			Blocks.DETECTOR_RAIL, Blocks.DIAMOND_BLOCK, Blocks.DIAMOND_ORE, Blocks.DOUBLE_STONE_SLAB,
+			Blocks.GOLDEN_RAIL, Blocks.GOLD_BLOCK, Blocks.GOLD_ORE, Blocks.ICE, Blocks.IRON_BLOCK, Blocks.IRON_ORE,
+			Blocks.LAPIS_BLOCK, Blocks.LAPIS_ORE, Blocks.LIT_REDSTONE_ORE, Blocks.MOSSY_COBBLESTONE, Blocks.NETHERRACK,
+			Blocks.PACKED_ICE, Blocks.RAIL, Blocks.REDSTONE_ORE, Blocks.SANDSTONE, Blocks.RED_SANDSTONE, Blocks.STONE,
+			Blocks.STONE_SLAB, Blocks.STONE_BUTTON, Blocks.STONE_PRESSURE_PLATE, Blocks.PLANKS, Blocks.BOOKSHELF,
+			Blocks.LOG, Blocks.LOG2, Blocks.CHEST, Blocks.PUMPKIN, Blocks.LIT_PUMPKIN, Blocks.MELON_BLOCK,
+			Blocks.LADDER, Blocks.WOODEN_BUTTON, Blocks.WOODEN_PRESSURE_PLATE });
 
 	public ItemYAAMPaxel(String unlocalizedName, ToolMaterial material) {
 		super(5.0F, -2.0F, material, EFFECTIVE_ON);
@@ -44,17 +44,17 @@ public class ItemYAAMPaxel extends ItemTool {
 	public boolean canHarvestBlock(IBlockState blockIn) {
 		Block block = blockIn.getBlock();
 
-		if (block == Blocks.obsidian) {
+		if (block == Blocks.OBSIDIAN) {
 			return this.toolMaterial.getHarvestLevel() == 3;
-		} else if (block != Blocks.diamond_block && block != Blocks.diamond_ore) {
-			if (block != Blocks.emerald_ore && block != Blocks.emerald_block) {
-				if (block != Blocks.gold_block && block != Blocks.gold_ore) {
-					if (block != Blocks.iron_block && block != Blocks.iron_ore) {
-						if (block != Blocks.lapis_block && block != Blocks.lapis_ore) {
-							if (block != Blocks.redstone_ore && block != Blocks.lit_redstone_ore) {
+		} else if (block != Blocks.DIAMOND_BLOCK && block != Blocks.DIAMOND_ORE) {
+			if (block != Blocks.EMERALD_BLOCK && block != Blocks.EMERALD_ORE) {
+				if (block != Blocks.GOLD_BLOCK && block != Blocks.GOLD_ORE) {
+					if (block != Blocks.IRON_BLOCK && block != Blocks.IRON_ORE) {
+						if (block != Blocks.LAPIS_BLOCK && block != Blocks.LAPIS_ORE) {
+							if (block != Blocks.REDSTONE_ORE && block != Blocks.LIT_REDSTONE_ORE) {
 								Material material = blockIn.getMaterial();
-								return material == Material.rock ? true
-										: (material == Material.iron ? true : material == Material.anvil);
+								return material == Material.ROCK ? true
+										: (material == Material.IRON ? true : material == Material.ANVIL);
 							} else {
 								return this.toolMaterial.getHarvestLevel() >= 2;
 							}
@@ -96,10 +96,10 @@ public class ItemYAAMPaxel extends ItemTool {
 			IBlockState iblockstate = worldIn.getBlockState(pos);
 			Block block = iblockstate.getBlock();
 
-			if (facing != EnumFacing.DOWN && worldIn.getBlockState(pos.up()).getMaterial() == Material.air
-					&& block == Blocks.grass) {
-				IBlockState iblockstate1 = Blocks.grass_path.getDefaultState();
-				worldIn.playSound(playerIn, pos, SoundEvents.item_shovel_flatten, SoundCategory.BLOCKS, 1.0F, 1.0F);
+			if (facing != EnumFacing.DOWN && worldIn.getBlockState(pos.up()).getMaterial() == Material.AIR
+					&& block == Blocks.GRASS) {
+				IBlockState iblockstate1 = Blocks.GRASS_PATH.getDefaultState();
+				worldIn.playSound(playerIn, pos, SoundEvents.ITEM_SHOVEL_FLATTEN, SoundCategory.BLOCKS, 1.0F, 1.0F);
 
 				if (!worldIn.isRemote) {
 					worldIn.setBlockState(pos, iblockstate1, 11);

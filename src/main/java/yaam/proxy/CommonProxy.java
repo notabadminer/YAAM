@@ -31,40 +31,40 @@ public class CommonProxy {
 
 	// Tool materials
 	static Item.ToolMaterial toolMaterialObsidian = EnumHelper.addToolMaterial("obsidian", 3, 1200, 9.0F, 4.0F, 16)
-			.setRepairItem(new ItemStack(Blocks.obsidian));
+			.setRepairItem(new ItemStack(Blocks.OBSIDIAN));
 	static Item.ToolMaterial toolMaterialQuartz = EnumHelper.addToolMaterial("quartz", 3, 1400, 9.0F, 3.0F, 18)
-			.setRepairItem(new ItemStack(Items.quartz));
+			.setRepairItem(new ItemStack(Items.QUARTZ));
 	static Item.ToolMaterial toolMaterialEmerald = EnumHelper.addToolMaterial("emerald", 3, 1400, 9.0F, 3.0F, 18)
-			.setRepairItem(new ItemStack(Items.emerald));
+			.setRepairItem(new ItemStack(Items.EMERALD));
 	static Item.ToolMaterial toolMaterialLapis = EnumHelper.addToolMaterial("lapis", 3, 800, 9.0F, 3.0F, 22)
-			.setRepairItem(new ItemStack(Items.dye, 1, 4));
+			.setRepairItem(new ItemStack(Items.DYE, 1, 4));
 	static Item.ToolMaterial paxelMaterialWood = EnumHelper.addToolMaterial("wood", 0, 177, 2.0F, 0.0F, 15);
 	static Item.ToolMaterial paxelMaterialStone = EnumHelper.addToolMaterial("stone", 1, 393, 4.0F, 1.0F, 5)
-			.setRepairItem(new ItemStack(Blocks.cobblestone));
+			.setRepairItem(new ItemStack(Blocks.COBBLESTONE));
 	static Item.ToolMaterial paxelMaterialIron = EnumHelper.addToolMaterial("iron", 2, 750, 6.0F, 2.0F, 14)
-			.setRepairItem(new ItemStack(Items.iron_ingot));
+			.setRepairItem(new ItemStack(Items.IRON_INGOT));
 	static Item.ToolMaterial paxelMaterialGold = EnumHelper.addToolMaterial("gold", 0, 96, 12.0F, 0.0F, 22)
-			.setRepairItem(new ItemStack(Items.gold_ingot));
+			.setRepairItem(new ItemStack(Items.GOLD_INGOT));
 	static Item.ToolMaterial paxelMaterialDiamond = EnumHelper.addToolMaterial("diamond", 3, 4683, 8.0F, 3.0F, 10)
-			.setRepairItem(new ItemStack(Items.diamond));
+			.setRepairItem(new ItemStack(Items.DIAMOND));
 	static Item.ToolMaterial paxelMaterialEmerald = EnumHelper.addToolMaterial("emerald", 3, 4200, 9.0F, 3.0F, 18)
-			.setRepairItem(new ItemStack(Items.emerald));
+			.setRepairItem(new ItemStack(Items.EMERALD));
 	static Item.ToolMaterial paxelMaterialQuartz = EnumHelper.addToolMaterial("quartz", 3, 4200, 9.0F, 3.0F, 18)
-			.setRepairItem(new ItemStack(Items.quartz));
+			.setRepairItem(new ItemStack(Items.QUARTZ));
 	static Item.ToolMaterial paxelMaterialObsidian = EnumHelper.addToolMaterial("obsidian", 3, 3600, 9.0F, 4.0F, 16)
-			.setRepairItem(new ItemStack(Blocks.obsidian));
+			.setRepairItem(new ItemStack(Blocks.OBSIDIAN));
 	static Item.ToolMaterial paxelMaterialLapis = EnumHelper.addToolMaterial("lapis", 3, 2400, 9.0F, 3.0F, 22)
-			.setRepairItem(new ItemStack(Items.dye, 1, 4));
+			.setRepairItem(new ItemStack(Items.DYE, 1, 4));
 
 	// Armor materials
 	static ArmorMaterial armorMaterialObsidian = EnumHelper.addArmorMaterial("obsidian", "yaam:obsidian", 28,
-			new int[] { 3, 6, 8, 3 }, 16, SoundEvents.item_armor_equip_diamond);
+			new int[] { 3, 6, 8, 3 }, 16, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 0);
 	static ArmorMaterial armorMaterialQuartz = EnumHelper.addArmorMaterial("quartz", "yaam:quartz", 30,
-			new int[] { 3, 6, 8, 3 }, 24, SoundEvents.item_armor_equip_diamond);
+			new int[] { 3, 6, 8, 3 }, 24, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 0);
 	static ArmorMaterial armorMaterialEmerald = EnumHelper.addArmorMaterial("emerald", "yaam:emerald", 33,
-			new int[] { 3, 6, 8, 3 }, 26, SoundEvents.item_armor_equip_diamond);
+			new int[] { 3, 6, 8, 3 }, 26, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 0);
 	static ArmorMaterial armorMaterialLapis = EnumHelper.addArmorMaterial("lapis", "yaam:lapis", 9,
-			new int[] { 2, 5, 6, 2 }, 30, SoundEvents.item_armor_equip_diamond);
+			new int[] { 2, 5, 6, 2 }, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 0);
 
 	public void registerBlocks() {
 	}
@@ -159,129 +159,129 @@ public class CommonProxy {
 		// obsidian
 		if (YAAM.obsidianEnabled) {
 			GameRegistry.addRecipe(new ItemStack(obsidian_axe, 1), new Object[] { "OO ", "OS ", " S ",
-					Character.valueOf('O'), Blocks.obsidian, Character.valueOf('S'), Items.stick });
+					Character.valueOf('O'), Blocks.OBSIDIAN, Character.valueOf('S'), Items.STICK });
 			GameRegistry.addRecipe(new ItemStack(obsidian_pickaxe, 1), new Object[] { "OOO", " S ", " S ",
-					Character.valueOf('O'), Blocks.obsidian, Character.valueOf('S'), Items.stick });
+					Character.valueOf('O'), Blocks.OBSIDIAN, Character.valueOf('S'), Items.STICK });
 			GameRegistry.addRecipe(new ItemStack(obsidian_hoe, 1), new Object[] { "OO ", " S ", " S ",
-					Character.valueOf('O'), Blocks.obsidian, Character.valueOf('S'), Items.stick });
+					Character.valueOf('O'), Blocks.OBSIDIAN, Character.valueOf('S'), Items.STICK });
 			GameRegistry.addRecipe(new ItemStack(obsidian_shovel, 1), new Object[] { " O ", " S ", " S ",
-					Character.valueOf('O'), Blocks.obsidian, Character.valueOf('S'), Items.stick });
+					Character.valueOf('O'), Blocks.OBSIDIAN, Character.valueOf('S'), Items.STICK });
 			GameRegistry.addRecipe(new ItemStack(obsidian_sword, 1), new Object[] { " O ", " O ", " S ",
-					Character.valueOf('O'), Blocks.obsidian, Character.valueOf('S'), Items.stick });
+					Character.valueOf('O'), Blocks.OBSIDIAN, Character.valueOf('S'), Items.STICK });
 			GameRegistry.addRecipe(new ItemStack(obsidian_paxel, 1),
 					new Object[] { "PAL", " S ", " S ", Character.valueOf('A'), obsidian_axe, Character.valueOf('P'),
 							obsidian_pickaxe, Character.valueOf('L'), obsidian_shovel, Character.valueOf('S'),
-							Items.stick });
+							Items.STICK });
 			GameRegistry.addRecipe(new ItemStack(obsidian_helmet, 1),
-					new Object[] { "OOO", "O O", Character.valueOf('O'), Blocks.obsidian });
+					new Object[] { "OOO", "O O", Character.valueOf('O'), Blocks.OBSIDIAN });
 			GameRegistry.addRecipe(new ItemStack(obsidian_chestplate, 1),
-					new Object[] { "O O", "OOO", "OOO", Character.valueOf('O'), Blocks.obsidian });
+					new Object[] { "O O", "OOO", "OOO", Character.valueOf('O'), Blocks.OBSIDIAN });
 			GameRegistry.addRecipe(new ItemStack(obsidian_leggings, 1),
-					new Object[] { "OOO", "O O", "O O", Character.valueOf('O'), Blocks.obsidian });
+					new Object[] { "OOO", "O O", "O O", Character.valueOf('O'), Blocks.OBSIDIAN });
 			GameRegistry.addRecipe(new ItemStack(obsidian_boots, 1),
-					new Object[] { "O O", "O O", Character.valueOf('O'), Blocks.obsidian });
+					new Object[] { "O O", "O O", Character.valueOf('O'), Blocks.OBSIDIAN });
 		}
 
 		// quartz
 		if (YAAM.quartzEnabled) {
 			GameRegistry.addRecipe(new ItemStack(quartz_axe, 1), new Object[] { "OO ", "OS ", " S ",
-					Character.valueOf('O'), Items.quartz, Character.valueOf('S'), Items.stick });
+					Character.valueOf('O'), Items.QUARTZ, Character.valueOf('S'), Items.STICK });
 			GameRegistry.addRecipe(new ItemStack(quartz_pickaxe, 1), new Object[] { "OOO", " S ", " S ",
-					Character.valueOf('O'), Items.quartz, Character.valueOf('S'), Items.stick });
+					Character.valueOf('O'), Items.QUARTZ, Character.valueOf('S'), Items.STICK });
 			GameRegistry.addRecipe(new ItemStack(quartz_hoe, 1), new Object[] { "OO ", " S ", " S ",
-					Character.valueOf('O'), Items.quartz, Character.valueOf('S'), Items.stick });
+					Character.valueOf('O'), Items.QUARTZ, Character.valueOf('S'), Items.STICK });
 			GameRegistry.addRecipe(new ItemStack(quartz_shovel, 1), new Object[] { " O ", " S ", " S ",
-					Character.valueOf('O'), Items.quartz, Character.valueOf('S'), Items.stick });
+					Character.valueOf('O'), Items.QUARTZ, Character.valueOf('S'), Items.STICK });
 			GameRegistry.addRecipe(new ItemStack(quartz_sword, 1), new Object[] { " O ", " O ", " S ",
-					Character.valueOf('O'), Items.quartz, Character.valueOf('S'), Items.stick });
+					Character.valueOf('O'), Items.QUARTZ, Character.valueOf('S'), Items.STICK });
 			GameRegistry.addRecipe(new ItemStack(quartz_paxel, 1),
 					new Object[] { "PAL", " S ", " S ", Character.valueOf('A'), quartz_axe, Character.valueOf('P'),
 							quartz_pickaxe, Character.valueOf('L'), quartz_shovel, Character.valueOf('S'),
-							Items.stick });
+							Items.STICK });
 			GameRegistry.addRecipe(new ItemStack(quartz_helmet, 1),
-					new Object[] { "OOO", "O O", Character.valueOf('O'), Items.quartz });
+					new Object[] { "OOO", "O O", Character.valueOf('O'), Items.QUARTZ });
 			GameRegistry.addRecipe(new ItemStack(quartz_chestplate, 1),
-					new Object[] { "O O", "OOO", "OOO", Character.valueOf('O'), Items.quartz });
+					new Object[] { "O O", "OOO", "OOO", Character.valueOf('O'), Items.QUARTZ });
 			GameRegistry.addRecipe(new ItemStack(quartz_leggings, 1),
-					new Object[] { "OOO", "O O", "O O", Character.valueOf('O'), Items.quartz });
+					new Object[] { "OOO", "O O", "O O", Character.valueOf('O'), Items.QUARTZ });
 			GameRegistry.addRecipe(new ItemStack(quartz_boots, 1),
-					new Object[] { "O O", "O O", Character.valueOf('O'), Items.quartz });
+					new Object[] { "O O", "O O", Character.valueOf('O'), Items.QUARTZ });
 		}
 
 		// emerald
 		if (YAAM.emeraldEnabled) {
 			GameRegistry.addRecipe(new ItemStack(emerald_axe, 1), new Object[] { "OO ", "OS ", " S ",
-					Character.valueOf('O'), Items.emerald, Character.valueOf('S'), Items.stick });
+					Character.valueOf('O'), Items.EMERALD, Character.valueOf('S'), Items.STICK });
 			GameRegistry.addRecipe(new ItemStack(emerald_pickaxe, 1), new Object[] { "OOO", " S ", " S ",
-					Character.valueOf('O'), Items.emerald, Character.valueOf('S'), Items.stick });
+					Character.valueOf('O'), Items.EMERALD, Character.valueOf('S'), Items.STICK });
 			GameRegistry.addRecipe(new ItemStack(emerald_hoe, 1), new Object[] { "OO ", " S ", " S ",
-					Character.valueOf('O'), Items.emerald, Character.valueOf('S'), Items.stick });
+					Character.valueOf('O'), Items.EMERALD, Character.valueOf('S'), Items.STICK });
 			GameRegistry.addRecipe(new ItemStack(emerald_shovel, 1), new Object[] { " O ", " S ", " S ",
-					Character.valueOf('O'), Items.emerald, Character.valueOf('S'), Items.stick });
+					Character.valueOf('O'), Items.EMERALD, Character.valueOf('S'), Items.STICK });
 			GameRegistry.addRecipe(new ItemStack(emerald_sword, 1), new Object[] { " O ", " O ", " S ",
-					Character.valueOf('O'), Items.emerald, Character.valueOf('S'), Items.stick });
+					Character.valueOf('O'), Items.EMERALD, Character.valueOf('S'), Items.STICK });
 			GameRegistry.addRecipe(new ItemStack(emerald_paxel, 1),
 					new Object[] { "PAL", " S ", " S ", Character.valueOf('A'), emerald_axe, Character.valueOf('P'),
 							emerald_pickaxe, Character.valueOf('L'), emerald_shovel, Character.valueOf('S'),
-							Items.stick });
+							Items.STICK });
 			GameRegistry.addRecipe(new ItemStack(emerald_helmet, 1),
-					new Object[] { "OOO", "O O", Character.valueOf('O'), Items.emerald });
+					new Object[] { "OOO", "O O", Character.valueOf('O'), Items.EMERALD });
 			GameRegistry.addRecipe(new ItemStack(emerald_chestplate, 1),
-					new Object[] { "O O", "OOO", "OOO", Character.valueOf('O'), Items.emerald });
+					new Object[] { "O O", "OOO", "OOO", Character.valueOf('O'), Items.EMERALD });
 			GameRegistry.addRecipe(new ItemStack(emerald_leggings, 1),
-					new Object[] { "OOO", "O O", "O O", Character.valueOf('O'), Items.emerald });
+					new Object[] { "OOO", "O O", "O O", Character.valueOf('O'), Items.EMERALD });
 			GameRegistry.addRecipe(new ItemStack(emerald_boots, 1),
-					new Object[] { "O O", "O O", Character.valueOf('O'), Items.emerald });
+					new Object[] { "O O", "O O", Character.valueOf('O'), Items.EMERALD });
 		}
 
 		// lapis
 		if (YAAM.lapisEnabled) {
 			GameRegistry.addRecipe(new ItemStack(emerald_axe, 1), new Object[] { "OO ", "OS ", " S ",
-					Character.valueOf('O'), new ItemStack(Items.dye, 1, 4), Character.valueOf('S'), Items.stick });
+					Character.valueOf('O'), new ItemStack(Items.DYE, 1, 4), Character.valueOf('S'), Items.STICK });
 			GameRegistry.addRecipe(new ItemStack(lapis_pickaxe, 1), new Object[] { "OOO", " S ", " S ",
-					Character.valueOf('O'), new ItemStack(Items.dye, 1, 4), Character.valueOf('S'), Items.stick });
+					Character.valueOf('O'), new ItemStack(Items.DYE, 1, 4), Character.valueOf('S'), Items.STICK });
 			GameRegistry.addRecipe(new ItemStack(lapis_hoe, 1), new Object[] { "OO ", " S ", " S ",
-					Character.valueOf('O'), new ItemStack(Items.dye, 1, 4), Character.valueOf('S'), Items.stick });
+					Character.valueOf('O'), new ItemStack(Items.DYE, 1, 4), Character.valueOf('S'), Items.STICK });
 			GameRegistry.addRecipe(new ItemStack(lapis_shovel, 1), new Object[] { " O ", " S ", " S ",
-					Character.valueOf('O'), new ItemStack(Items.dye, 1, 4), Character.valueOf('S'), Items.stick });
+					Character.valueOf('O'), new ItemStack(Items.DYE, 1, 4), Character.valueOf('S'), Items.STICK });
 			GameRegistry.addRecipe(new ItemStack(lapis_sword, 1), new Object[] { " O ", " O ", " S ",
-					Character.valueOf('O'), new ItemStack(Items.dye, 1, 4), Character.valueOf('S'), Items.stick });
+					Character.valueOf('O'), new ItemStack(Items.DYE, 1, 4), Character.valueOf('S'), Items.STICK });
 			GameRegistry
 					.addRecipe(new ItemStack(lapis_paxel, 1),
 							new Object[] { "PAL", " S ", " S ", Character.valueOf('A'), lapis_axe,
 									Character.valueOf('P'), lapis_pickaxe, Character.valueOf('L'), lapis_shovel,
-									Character.valueOf('S'), Items.stick });
+									Character.valueOf('S'), Items.STICK });
 			GameRegistry.addRecipe(new ItemStack(lapis_helmet, 1),
-					new Object[] { "OOO", "O O", Character.valueOf('O'), new ItemStack(Items.dye, 1, 4) });
+					new Object[] { "OOO", "O O", Character.valueOf('O'), new ItemStack(Items.DYE, 1, 4) });
 			GameRegistry.addRecipe(new ItemStack(lapis_chestplate, 1),
-					new Object[] { "O O", "OOO", "OOO", Character.valueOf('O'), new ItemStack(Items.dye, 1, 4) });
+					new Object[] { "O O", "OOO", "OOO", Character.valueOf('O'), new ItemStack(Items.DYE, 1, 4) });
 			GameRegistry.addRecipe(new ItemStack(lapis_leggings, 1),
-					new Object[] { "OOO", "O O", "O O", Character.valueOf('O'), new ItemStack(Items.dye, 1, 4) });
+					new Object[] { "OOO", "O O", "O O", Character.valueOf('O'), new ItemStack(Items.DYE, 1, 4) });
 			GameRegistry.addRecipe(new ItemStack(lapis_boots, 1),
-					new Object[] { "O O", "O O", Character.valueOf('O'), new ItemStack(Items.dye, 1, 4) });
+					new Object[] { "O O", "O O", Character.valueOf('O'), new ItemStack(Items.DYE, 1, 4) });
 
 			// natives
 			if (YAAM.nativePaxelsEnabled) {
 				GameRegistry.addRecipe(new ItemStack(wood_paxel, 1),
-						new Object[] { "PAL", " S ", " S ", Character.valueOf('A'), Items.wooden_axe,
-								Character.valueOf('P'), Items.wooden_pickaxe, Character.valueOf('L'),
-								Items.wooden_shovel, Character.valueOf('S'), Items.stick });
+						new Object[] { "PAL", " S ", " S ", Character.valueOf('A'), Items.WOODEN_AXE,
+								Character.valueOf('P'), Items.WOODEN_PICKAXE, Character.valueOf('L'),
+								Items.WOODEN_SHOVEL, Character.valueOf('S'), Items.STICK });
 				GameRegistry.addRecipe(new ItemStack(stone_paxel, 1),
-						new Object[] { "PAL", " S ", " S ", Character.valueOf('A'), Items.stone_axe,
-								Character.valueOf('P'), Items.stone_pickaxe, Character.valueOf('L'), Items.stone_shovel,
-								Character.valueOf('S'), Items.stick });
+						new Object[] { "PAL", " S ", " S ", Character.valueOf('A'), Items.STONE_AXE,
+								Character.valueOf('P'), Items.STONE_PICKAXE, Character.valueOf('L'), Items.STONE_SHOVEL,
+								Character.valueOf('S'), Items.STICK });
 				GameRegistry.addRecipe(new ItemStack(iron_paxel, 1),
-						new Object[] { "PAL", " S ", " S ", Character.valueOf('A'), Items.iron_axe,
-								Character.valueOf('P'), Items.iron_pickaxe, Character.valueOf('L'), Items.iron_shovel,
-								Character.valueOf('S'), Items.stick });
+						new Object[] { "PAL", " S ", " S ", Character.valueOf('A'), Items.IRON_AXE,
+								Character.valueOf('P'), Items.IRON_PICKAXE, Character.valueOf('L'), Items.IRON_SHOVEL,
+								Character.valueOf('S'), Items.STICK });
 				GameRegistry.addRecipe(new ItemStack(gold_paxel, 1),
-						new Object[] { "PAL", " S ", " S ", Character.valueOf('A'), Items.golden_axe,
-								Character.valueOf('P'), Items.golden_pickaxe, Character.valueOf('L'),
-								Items.golden_shovel, Character.valueOf('S'), Items.stick });
+						new Object[] { "PAL", " S ", " S ", Character.valueOf('A'), Items.GOLDEN_AXE,
+								Character.valueOf('P'), Items.GOLDEN_PICKAXE, Character.valueOf('L'),
+								Items.GOLDEN_SHOVEL, Character.valueOf('S'), Items.STICK });
 				GameRegistry.addRecipe(new ItemStack(diamond_paxel, 1),
-						new Object[] { "PAL", " S ", " S ", Character.valueOf('A'), Items.diamond_axe,
-								Character.valueOf('P'), Items.diamond_pickaxe, Character.valueOf('L'),
-								Items.diamond_shovel, Character.valueOf('S'), Items.stick });
+						new Object[] { "PAL", " S ", " S ", Character.valueOf('A'), Items.DIAMOND_AXE,
+								Character.valueOf('P'), Items.DIAMOND_PICKAXE, Character.valueOf('L'),
+								Items.DIAMOND_SHOVEL, Character.valueOf('S'), Items.STICK });
 			}
 		}
 	}

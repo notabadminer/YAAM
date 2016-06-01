@@ -23,9 +23,9 @@ public class ItemYAAMArmor extends ItemArmor {
 	 */
 	@Override
 	public boolean getIsRepairable(ItemStack toRepair, ItemStack repair) {
-		return this.material.equals("obsidian") && repair.getItem().equals(Item.getItemFromBlock(Blocks.obsidian))
-				|| this.material.equals("quartz") && repair.getItem().equals(Items.quartz)
-				|| this.material.equals("emerald") && repair.getItem().equals(Items.emerald)
-				|| this.material.equals("lapis") && repair.getItem().equals(Items.dye) && repair.getItemDamage() == 4;
+		return this.material.equals("obsidian") && repair.getItem().equals(Item.getItemFromBlock(Blocks.OBSIDIAN))
+				|| this.material.equals("quartz") && repair.getItem().equals(Items.QUARTZ)
+				|| this.material.equals("emerald") && repair.getItem().equals(Items.EMERALD)
+				|| this.material.equals("lapis") && repair.getItem().equals(Items.DYE) && repair.getItemDamage() == 4;
 	}
 }
