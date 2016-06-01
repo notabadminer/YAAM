@@ -58,13 +58,13 @@ public class CommonProxy {
 
 	// Armor materials
 	static ArmorMaterial armorMaterialObsidian = EnumHelper.addArmorMaterial("obsidian", "yaam:obsidian", 28,
-			new int[] { 3, 6, 8, 3 }, 16, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 0);
+			new int[] { 3, 6, 8, 3 }, 16, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.0F);
 	static ArmorMaterial armorMaterialQuartz = EnumHelper.addArmorMaterial("quartz", "yaam:quartz", 30,
-			new int[] { 3, 6, 8, 3 }, 24, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 0);
+			new int[] { 3, 6, 8, 3 }, 24, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.0F);
 	static ArmorMaterial armorMaterialEmerald = EnumHelper.addArmorMaterial("emerald", "yaam:emerald", 33,
-			new int[] { 3, 6, 8, 3 }, 26, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 0);
+			new int[] { 3, 6, 8, 3 }, 26, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.0F);
 	static ArmorMaterial armorMaterialLapis = EnumHelper.addArmorMaterial("lapis", "yaam:lapis", 9,
-			new int[] { 2, 5, 6, 2 }, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 0);
+			new int[] { 2, 5, 6, 2 }, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 1.0F);
 
 	public void registerBlocks() {
 	}
