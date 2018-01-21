@@ -5,6 +5,7 @@ import java.util.Set;
 import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Sets;
 
+import cpw.mods.fml.common.FMLLog;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.audio.SoundCategory;
@@ -18,7 +19,7 @@ import yaam.YAAM;
 
 public class ItemYAAMPaxel extends ItemTool {
 
-	private static final Set<Block> EFFECTIVE_ON = Sets.newHashSet(new Block[] { Blocks.cobblestone,
+	private static final Set field_150915_c = Sets.newHashSet(new Block[] { Blocks.cobblestone,
 			Blocks.double_stone_slab, Blocks.stone_slab, Blocks.stone, Blocks.sandstone, Blocks.mossy_cobblestone,
 			Blocks.iron_ore, Blocks.iron_block, Blocks.coal_ore, Blocks.gold_block, Blocks.gold_ore, Blocks.diamond_ore,
 			Blocks.diamond_block, Blocks.ice, Blocks.netherrack, Blocks.lapis_ore, Blocks.lapis_block,
@@ -28,7 +29,7 @@ public class ItemYAAMPaxel extends ItemTool {
 			Blocks.bookshelf, Blocks.log, Blocks.log2, Blocks.chest, Blocks.pumpkin, Blocks.lit_pumpkin });
 
 	public ItemYAAMPaxel(String unlocalizedName, ToolMaterial material) {
-		super(5.0F, material, EFFECTIVE_ON);
+		super(5.0F, material, field_150915_c);
 		this.setUnlocalizedName(unlocalizedName);
 		this.setTextureName(YAAM.MODID + ":" + unlocalizedName);
 	}
@@ -65,6 +66,9 @@ public class ItemYAAMPaxel extends ItemTool {
 
 	@Override
 	public float func_150893_a(ItemStack stack, Block block) {
-		return this.EFFECTIVE_ON.contains(block) ? this.efficiencyOnProperMaterial : 1.0F;
+		return block.getMaterial() != Material.iron && block.getMaterial() != Material.anvil
+				&& block.getMaterial() != Material.rock ? super.func_150893_a(stack, block)
+						: this.efficiencyOnProperMaterial;
+
 	}
 }
