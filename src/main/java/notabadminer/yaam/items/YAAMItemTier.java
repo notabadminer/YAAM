@@ -1,4 +1,4 @@
-package notabadminer.yaam;
+package notabadminer.yaam.items;
 
 import java.util.function.Supplier;
 
