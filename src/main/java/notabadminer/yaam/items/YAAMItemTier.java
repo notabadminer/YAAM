@@ -42,10 +42,10 @@ public enum YAAMItemTier implements IItemTier {
 	PAXELLAPIS(3, 2400, 9.0F, 3.0F, 22, () -> {
 		return Ingredient.fromItems(Items.LAPIS_LAZULI);
 	}),
-	PAXELOBSIDIAN(3, 3600, 9.0F, 4.0F, 16, () -> {
-		return Ingredient.fromItems(Items.QUARTZ);
+	PAXELOBSIDIAN(3, 5683, 9.0F, 4.0F, 16, () -> {
+		return Ingredient.fromItems(Items.OBSIDIAN);
 	}),
-	PAXELQUARTZ(3, 4200, 9.0F, 3.0F, 18, () -> {
+	PAXELQUARTZ(3, 4200, 9.0F, 4.0F, 18, () -> {
 		return Ingredient.fromItems(Items.QUARTZ);
 	});
 	
