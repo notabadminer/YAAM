@@ -13,13 +13,13 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
 public enum YAAMArmorMaterial implements IArmorMaterial {
-	OBSIDIAN("obsidian", 33, new int[] { 3, 6, 8, 3 }, 16, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.0F, () -> {
+	OBSIDIAN("yaam:obsidian", 33, new int[] { 3, 6, 8, 3 }, 16, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.0F, () -> {
 		return Ingredient.fromItems(Items.OBSIDIAN);
-	}), QUARTZ("quartz", 33, new int[] { 3, 6, 8, 3 }, 24, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.0F, () -> {
+	}), QUARTZ("yaam:quartz", 33, new int[] { 3, 6, 8, 3 }, 24, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.0F, () -> {
 		return Ingredient.fromItems(Items.QUARTZ);
-	}), EMERALD("emerald", 33, new int[] { 3, 6, 8, 3 }, 26, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.0F, () -> {
+	}), EMERALD("yaam:emerald", 33, new int[] { 3, 6, 8, 3 }, 26, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.0F, () -> {
 		return Ingredient.fromItems(Items.EMERALD);
-	}), LAPIS("lapis", 33, new int[] { 2, 5, 6, 2 }, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 1.0F, () -> {
+	}), LAPIS("yaam:lapis", 33, new int[] { 2, 5, 6, 2 }, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 1.0F, () -> {
 		return Ingredient.fromItems(Items.LAPIS_LAZULI);
 	});
 

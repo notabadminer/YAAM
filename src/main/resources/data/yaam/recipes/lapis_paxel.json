@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "WXY",
+    " # ",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "W": {
+      "item": "yaam:lapis_pickaxe"
+    },
+    "X": {
+      "item": "yaam:lapis_axe"
+    },
+    "Y": {
+      "item": "yaam:lapis_shovel"
+    }
+  },
+  "result": {
+    "item": "yaam:lapis_paxel"
+  }
+}

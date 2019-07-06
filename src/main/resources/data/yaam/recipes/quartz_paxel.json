@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "WXY",
+    " # ",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "W": {
+      "item": "yaam:quartz_pickaxe"
+    },
+    "X": {
+      "item": "yaam:quartz_axe"
+    },
+    "Y": {
+      "item": "yaam:quartz_shovel"
+    }
+  },
+  "result": {
+    "item": "yaam:quartz_paxel"
+  }
+}

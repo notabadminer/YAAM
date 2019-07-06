@@ -1,6 +1,6 @@
 {
     "parent": "item/handheld",
     "textures": {
-        "layer0": "yaam:items/wood_paxel"
+        "layer0": "yaam:items/wooden_paxel"
     }
 }

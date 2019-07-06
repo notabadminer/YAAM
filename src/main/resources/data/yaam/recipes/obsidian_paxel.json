@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "WXY",
+    " # ",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "W": {
+      "item": "yaam:obsidian_pickaxe"
+    },
+    "X": {
+      "item": "yaam:obsidian_axe"
+    },
+    "Y": {
+      "item": "yaam:obsidian_shovel"
+    }
+  },
+  "result": {
+    "item": "yaam:obsidian_paxel"
+  }
+}
