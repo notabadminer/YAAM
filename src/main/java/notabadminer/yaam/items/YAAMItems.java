@@ -2,9 +2,11 @@ package notabadminer.yaam.items;
 
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.ArmorItem;
+import net.minecraft.item.AxeItem;
 import net.minecraft.item.HoeItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.item.PickaxeItem;
 import net.minecraft.item.ShovelItem;
 import net.minecraft.item.SwordItem;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -39,9 +41,9 @@ public class YAAMItems {
 				(new Item.Properties()).group(ItemGroup.COMBAT)).setRegistryName("emerald_sword"));
 		ForgeRegistries.ITEMS.register(emerald_shovel = new ShovelItem(YAAMItemTier.EMERALD, 1.5F, -3.0F,
 				(new Item.Properties()).group(ItemGroup.TOOLS)).setRegistryName("emerald_shovel"));
-		ForgeRegistries.ITEMS.register(emerald_axe = new YAAMAxeItem(YAAMItemTier.EMERALD, 5.0F, -3.0F,
+		ForgeRegistries.ITEMS.register(emerald_axe = new AxeItem(YAAMItemTier.EMERALD, 5.0F, -3.0F,
 				(new Item.Properties()).group(ItemGroup.TOOLS)).setRegistryName("emerald_axe"));
-		ForgeRegistries.ITEMS.register(emerald_pickaxe = new YAAMPickaxeItem(YAAMItemTier.EMERALD, 1, -2.8F,
+		ForgeRegistries.ITEMS.register(emerald_pickaxe = new PickaxeItem(YAAMItemTier.EMERALD, 1, -2.8F,
 				(new Item.Properties()).group(ItemGroup.TOOLS)).setRegistryName("emerald_pickaxe"));
 		ForgeRegistries.ITEMS.register(emerald_paxel = new YAAMPaxelItem(YAAMItemTier.PAXELEMERALD, 5.0F, -3.0F,
 				(new Item.Properties()).group(ItemGroup.TOOLS)).setRegistryName("emerald_paxel"));
@@ -64,9 +66,9 @@ public class YAAMItems {
 				(new Item.Properties()).group(ItemGroup.COMBAT)).setRegistryName("lapis_sword"));
 		ForgeRegistries.ITEMS.register(lapis_shovel = new ShovelItem(YAAMItemTier.LAPIS, 1.5F, -3.0F,
 				(new Item.Properties()).group(ItemGroup.TOOLS)).setRegistryName("lapis_shovel"));
-		ForgeRegistries.ITEMS.register(lapis_axe = new YAAMAxeItem(YAAMItemTier.LAPIS, 5.0F, -3.0F,
+		ForgeRegistries.ITEMS.register(lapis_axe = new AxeItem(YAAMItemTier.LAPIS, 5.0F, -3.0F,
 				(new Item.Properties()).group(ItemGroup.TOOLS)).setRegistryName("lapis_axe"));
-		ForgeRegistries.ITEMS.register(lapis_pickaxe = new YAAMPickaxeItem(YAAMItemTier.LAPIS, 1, -2.8F,
+		ForgeRegistries.ITEMS.register(lapis_pickaxe = new PickaxeItem(YAAMItemTier.LAPIS, 1, -2.8F,
 				(new Item.Properties()).group(ItemGroup.TOOLS)).setRegistryName("lapis_pickaxe"));
 		ForgeRegistries.ITEMS.register(lapis_paxel = new YAAMPaxelItem(YAAMItemTier.PAXELLAPIS, 5.0F, -3.0F,
 				(new Item.Properties()).group(ItemGroup.TOOLS)).setRegistryName("lapis_paxel"));
@@ -89,9 +91,9 @@ public class YAAMItems {
 				(new Item.Properties()).group(ItemGroup.COMBAT)).setRegistryName("obsidian_sword"));
 		ForgeRegistries.ITEMS.register(obsidian_shovel = new ShovelItem(YAAMItemTier.OBSIDIAN, 1.5F, -3.0F,
 				(new Item.Properties()).group(ItemGroup.TOOLS)).setRegistryName("obsidian_shovel"));
-		ForgeRegistries.ITEMS.register(obsidian_axe = new YAAMAxeItem(YAAMItemTier.OBSIDIAN, 5.0F, -3.0F,
+		ForgeRegistries.ITEMS.register(obsidian_axe = new AxeItem(YAAMItemTier.OBSIDIAN, 5.0F, -3.0F,
 				(new Item.Properties()).group(ItemGroup.TOOLS)).setRegistryName("obsidian_axe"));
-		ForgeRegistries.ITEMS.register(obsidian_pickaxe = new YAAMPickaxeItem(YAAMItemTier.OBSIDIAN, 1, -2.8F,
+		ForgeRegistries.ITEMS.register(obsidian_pickaxe = new PickaxeItem(YAAMItemTier.OBSIDIAN, 1, -2.8F,
 				(new Item.Properties()).group(ItemGroup.TOOLS)).setRegistryName("obsidian_pickaxe"));
 		ForgeRegistries.ITEMS.register(obsidian_paxel = new YAAMPaxelItem(YAAMItemTier.PAXELOBSIDIAN, 5.0F, -3.0F,
 				(new Item.Properties()).group(ItemGroup.TOOLS)).setRegistryName("obsidian_paxel"));
@@ -114,9 +116,9 @@ public class YAAMItems {
 				(new Item.Properties()).group(ItemGroup.COMBAT)).setRegistryName("quartz_sword"));
 		ForgeRegistries.ITEMS.register(quartz_shovel = new ShovelItem(YAAMItemTier.QUARTZ, 1.5F, -3.0F,
 				(new Item.Properties()).group(ItemGroup.TOOLS)).setRegistryName("quartz_shovel"));
-		ForgeRegistries.ITEMS.register(quartz_axe = new YAAMAxeItem(YAAMItemTier.QUARTZ, 5.0F, -3.0F,
+		ForgeRegistries.ITEMS.register(quartz_axe = new AxeItem(YAAMItemTier.QUARTZ, 5.0F, -3.0F,
 				(new Item.Properties()).group(ItemGroup.TOOLS)).setRegistryName("quartz_axe"));
-		ForgeRegistries.ITEMS.register(quartz_pickaxe = new YAAMPickaxeItem(YAAMItemTier.QUARTZ, 1, -2.8F,
+		ForgeRegistries.ITEMS.register(quartz_pickaxe = new PickaxeItem(YAAMItemTier.QUARTZ, 1, -2.8F,
 				(new Item.Properties()).group(ItemGroup.TOOLS)).setRegistryName("quartz_pickaxe"));
 		ForgeRegistries.ITEMS.register(quartz_paxel = new YAAMPaxelItem(YAAMItemTier.PAXELQUARTZ, 5.0F, -3.0F,
 				(new Item.Properties()).group(ItemGroup.TOOLS)).setRegistryName("quartz_paxel"));
