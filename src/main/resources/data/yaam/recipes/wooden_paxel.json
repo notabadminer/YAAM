@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "WXY",
+    " # ",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "W": {
+      "item": "minecraft:wooden_pickaxe"
+    },
+    "X": {
+      "item": "minecraft:wooden_axe"
+    },
+    "Y": {
+      "item": "minecraft:wooden_shovel"
+    }
+  },
+  "result": {
+    "item": "yaam:wooden_paxel"
+  }
+}

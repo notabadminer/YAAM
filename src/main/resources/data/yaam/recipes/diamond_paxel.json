@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "WXY",
+    " # ",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "W": {
+      "item": "minecraft:diamond_pickaxe"
+    },
+    "X": {
+      "item": "minecraft:diamond_axe"
+    },
+    "Y": {
+      "item": "minecraft:diamond_shovel"
+    }
+  },
+  "result": {
+    "item": "yaam:diamond_paxel"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "WXY",
+    " # ",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "W": {
+      "item": "yaam:emerald_pickaxe"
+    },
+    "X": {
+      "item": "yaam:emerald_axe"
+    },
+    "Y": {
+      "item": "yaam:emerald_shovel"
+    }
+  },
+  "result": {
+    "item": "yaam:emerald_paxel"
+  }
+}

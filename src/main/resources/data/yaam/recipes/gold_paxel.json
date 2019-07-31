@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "WXY",
+    " # ",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "W": {
+      "item": "minecraft:gold_pickaxe"
+    },
+    "X": {
+      "item": "minecraft:gold_axe"
+    },
+    "Y": {
+      "item": "minecraft:gold_shovel"
+    }
+  },
+  "result": {
+    "item": "yaam:gold_paxel"
+  }
+}
