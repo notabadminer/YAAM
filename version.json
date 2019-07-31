@@ -2,9 +2,13 @@
   "homepage": "https://github.com/notabadminer/YAAM/releases",
   "promos": {
     "1.9-latest": "0.5",
-    "1.9-recommendedd": "0.5"
+    "1.9-recommended": "0.5",
+    "1.14-recommended": "0.3"
   },
   "1.9" : {
     "0.5": "Changed to forge mod update notification system"
+  },
+  "1.14.4" : {
+    "0.3": "Updated to Minecraft 1.14.4"
   }
 }
